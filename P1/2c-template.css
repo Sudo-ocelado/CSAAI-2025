@@ -1,0 +1,104 @@
+/* https://www.w3schools.com/howto/howto_css_two_columns.asp */
+/* https://developer.mozilla.org/es/docs/Web/CSS/box-sizing */
+/* Así definimos el comportamiento de caja para todos los elementos */
+* {
+    box-sizing: border-box;
+}
+
+.foto-container {
+  width: 150px; /* puedes ajustar el tamaño */
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  margin: 0 auto 15px auto;
+}
+
+.foto-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center 40%; /* centrado + desplazado hacia abajo */
+}
+
+
+
+
+.izquierda {
+    width: 65%;
+    background-color: #f9f6f1; /* blanco crudo */
+    color: #000;
+}
+
+.derecha {
+    width: 35%;
+    background-color: #003366; /* azul currículum */
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.iresponsive {
+    padding: 0 6px;
+    float: left;
+    width: 100%;
+}
+
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+
+
+
+.seccion {
+    margin-bottom: 15px;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid #fff;
+    margin: 15px 0;
+}
+
+a {
+    color: #66ccff; /* azul claro para buena visibilidad sobre fondo azul */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffffff; /* al pasar el mouse, blanco puro */
+}
+
+.fecha {
+    font-size: 0.8em;
+    color: #666;
+    margin-left: 6px;
+}
+.fila {
+  display: flex;
+  align-items: stretch; /* ambas columnas igual de altas */
+}
+.columna {
+  padding: 10px;
+  min-height: 500px;}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .columna {
+        width: 100%;
+    }
+
+    .iresponsive {
+        width: 100%;
+    }
+}
+
+/* Más sobre diseño web responsive https://www.w3schools.com/css/css_rwd_intro.asp */
