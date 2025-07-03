@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <link rel="icon" type="image/x-icon" href="icono_bomba.png">
+    <link rel="stylesheet" href="style.css">
+    <title>BOOM</title>
+
+</head>
+<body>
+<div class="contenedor-bomba">
+    <!-- Imagen de la bomba -->
+    <img src="bomba_sin_fondo.webp" alt="Bomba" class="imagen-bomba">
+    <div class="pantalla-bomba">
+        <span class="digito">*</span>
+        <span class="digito">*</span>
+        <span class="digito">*</span>
+        <span class="digito">*</span>
+    </div>
+    <p class="cronometro" id="crono">00:00:00</p>
+    <p class = "contador" id = "intentos" >10</p>
+    <button class="boton" id="boton1" value= 1 style="top: 51.5%; left: 46%;"></button>
+    <button class="boton" id="boton2" value= 2 style="top: 51.5%; left: 48.9%;"></button>
+    <button class="boton" id="boton3" value= 3 style="top: 51.5%; left: 51.9%;"></button>
+    <button class="boton" id="boton4" value= 4 style="top: 56.6%; left: 46%;"></button>
+    <button class="boton" id="boton5" value= 5 style="top: 56.6%; left: 48.9%;"></button>
+    <button class="boton" id="boton6" value= 6 style="top: 56.6%; left: 52%;"></button>
+    <button class="boton" id="boton7" value= 7 style="top: 61.4%; left: 46%;"></button>
+    <button class="boton" id="boton8" value= 8 style="top: 61.4%; left: 49%;"></button>
+    <button class="boton" id="boton9" value= 9 style="top: 61.4%; left: 51.9%;"></button>
+    <button class="boton" id="*" value="*" style="top: 66.5%; left: 46%;"></button>
+    <button class="boton" id="boton0" value= 0 style="top: 66.5%; left: 48.9%;"></button>
+    <button class="boton" id="#" value="#" style="top: 66.5%; left: 51.9%;"></button>
+
+
+</div>
+<script src="crono.js"></script>
+<script src="boom_logic1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* styles.css */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+}
+
+.contenedor-bomba {
+    position: relative;
+    width: 1152px; /* 3840 * 0.3 = 1152 */
+    height: 648px; /* 2160 * 0.3 = 648 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita que los botones se salgan del contenedor */
+}
+
+.imagen-bomba {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Asegura que la imagen se vea completa */
+    transform-origin: top left;
+    z-index: 1;
+
+}
+
+.pantalla-bomba {
+    position: absolute;
+    top: 34%; /* Ajusta la posición vertical */
+    left: 51.5%; /* Ajusta la posición horizontal */
+    transform: translateX(-50%); /* Centra horizontalmente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 145px; /* Ancho del display */
+    height: 2px; /* Alto del display */
+    background-color: #33301d; /* Fondo del display */
+    border: 8px solid #2e2e2e; /* Borde del display */
+    border-radius: 5px; /* Esquinas ligeramente redondeadas */
+    padding: 10px;
+    z-index: 10; /* Asegura que esté sobre la imagen */
+}
+
+.digito.incorrecto {
+    background-color: darkred;
+    color: white;
+}
+
+.cronometro {
+    position: absolute;
+    top: 24.2%;
+    left: 49.9%;
+    transform: translateX(-50%);
+    font-family: "Courier New", monospace;
+    font-size: 25px;
+    font-weight: bold;
+    z-index: 2;
+
+}
+
+.boton {
+    position: absolute;
+    width: 20px; /* Mismo valor para width y height */
+    height: 20px;
+    background-color: transparent; /* Sin relleno */
+    border: 2px solid; /* Grosor del borde */
+    border-color: #ccc #666 #494949 #ccc; /* Reborde en 3D (arriba, derecha, abajo, izquierda) */
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+    z-index: 2; /* Asegura que los botones estén sobre la imagen */
+}
+
+.boton:hover {
+    transform: scale(1.1);
+    background-color: darkred;
+    opacity: 40%;
+
+}
+
+.contador {
+    position: absolute;
+    top: 26%;
+    left: 56%;
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif; /* O 'Digital-7', 'LCD' */
+    font-weight: bold;
+    color: rgba(68, 255, 0, 0.46);
+    z-index: 5; /* Asegúrate de que esté sobre la imagen */
+}

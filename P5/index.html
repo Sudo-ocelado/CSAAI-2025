@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+  <title>Canvas centrado con UI</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Elimina el scroll */
+      width: 100vw;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .marco {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 600px;
+      border: 2px solid #000;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      background-color: #f0f0f0;
+    }
+
+    .barra-superior {
+      height: 50px;
+      background-color: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+
+    .barra-superior button {
+      margin-right: 10px;
+      padding: 6px 12px;
+      background-color: #555;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .barra-superior button:hover {
+      background-color: #777;
+    }
+
+    .info {
+      font-size: 14px;
+    }
+
+    canvas {
+      flex: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="marco">
+    <div class="barra-superior">
+      <div>
+        <button id="generateBtn">Generar red</button>
+        <button id="routeBtn">Calcular ruta</button>
+      </div>
+      <div class="info">
+        N nodos: <span id="nNodes">0</span> | Red generada: <span id="generatedNet">No</span>| Delay total: <span id="totalDelay">0 ms</span>
+
+      </div>
+    </div>
+    <canvas id="canvas" width="800" height="550"></canvas>
+  </div>
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>
